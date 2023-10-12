@@ -1,0 +1,22 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body {
+    overflow-x: hidden !important;
+}
+.aparecer {
+    background-image: url(imgs/Gato_emo.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+.scooby,.comedor_cu,.macporra {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
