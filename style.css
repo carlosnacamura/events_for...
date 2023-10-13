@@ -19,16 +19,40 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 20px;
   width: 100vw;
   height: 100vh;
   animation: troca_fundo 10s alternate infinite;
 }
+.dog {
+  display: none;
+  transition: 0.5s;
+}
+.catEat {
+  display: none;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 20%;
+  top: 20%;
+}
+.catDance {
+  right: 10%;
+  top:4%;
+  display: none;
+  position: absolute;
+}
+.aparecer h1 {
+  color: white;
+  font-family: monospace;
+}
 .fundo {
-    background-color: black;
-    display: none;
+  background-color: black;
+  display: none;
 }
 .explicacao {
-    color: white;
+  color: white;
+  font-family: monospace;
 }
 iframe {
   width: 80vw;
@@ -44,9 +68,19 @@ iframe {
   background-color: black;
   color: white;
 }
+.comecar::before,
+.comecar::after {
+  content: " ";
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid white;
+  animation: punsalte 3s linear infinite;
+}
 .botao_surpresa {
-    border: none;
-    border-radius: 20px;
+  border: none;
+  border-radius: 20px;
 }
 .scooby,
 .comedor_cu,
@@ -58,7 +92,7 @@ iframe {
   background-color: black;
   padding: 10px;
   display: none;
-  transition: .5s;
+  transition: 0.5s;
 }
 @keyframes troca_fundo {
   0% {
@@ -76,5 +110,19 @@ iframe {
   }
   100% {
     background-image: url(imgs/gato_comBomba.jpg);
+  }
+}
+@keyframes punsalte {
+  0% {
+    padding: 0px;
+    opacity: 0;
+  }
+  50% {
+    padding: 40px;
+    opacity: 1;
+  }
+  100% {
+    padding: 50px;
+    opacity: 0;
   }
 }

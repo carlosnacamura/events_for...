@@ -80,10 +80,10 @@ addEventListener("keydown", (evt) => {
       sons.vasco.play();
       break;
     case "r":
-      sons.pinto.play();
+      sons.manga.play();
       break;
     case "e":
-      sons.tira.play();
+      sons.kwai.play();
       break;
     case "n":
       sons.elon.play();
@@ -126,3 +126,15 @@ addEventListener("keydown", (evt) => {
       break;
   }
 });
+setTimeout(()=>{
+  const dog_img = document.querySelector(".dog")
+  dog_img.style.display = "block"
+},10000)
+setTimeout(() => {
+  const gatoEat_img = document.querySelector(".catEat")
+  gatoEat_img.style.display = "block"
+}, 15000);
+setInterval(()=>{
+  const gatoDance_img = document.querySelector(".catDance")
+  gatoDance_img.style.display = "block"
+},20000)
