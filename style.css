@@ -1,39 +1,80 @@
 * {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-html,body {
-    overflow-x: hidden !important;
+html,
+body {
+  overflow-x: hidden !important;
 }
 body {
-    transition: .5s;
+  transition: 0.5s;
+  background-color: black;
 }
 .aparecer {
-    background-image: url(imgs/Gato_emo.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
+  background-image: url(imgs/Gato_emo.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: troca_fundo 10s alternate infinite;
 }
-.aparecer button {
-    border-radius: 50%;
-    padding: 30px;
-    border: none;
-    transition: .5s;
-}
-.aparecer button:hover {
+.fundo {
     background-color: black;
+    display: none;
+}
+.explicacao {
     color: white;
 }
-.scooby,.comedor_cu,.macporra,.gatos,.core,.mario,.dokidoki {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    display: none;
+iframe {
+  width: 80vw;
+  height: 80vh;
+}
+.comecar {
+  border-radius: 50%;
+  padding: 30px;
+  border: none;
+  transition: 0.5s;
+}
+.comecar:hover {
+  background-color: black;
+  color: white;
+}
+.botao_surpresa {
+    border: none;
+    border-radius: 20px;
+}
+.scooby,
+.comedor_cu,
+.macporra,
+.gatos,
+.core,
+.mario,
+.dokidoki {
+  background-color: black;
+  padding: 10px;
+  display: none;
+  transition: .5s;
+}
+@keyframes troca_fundo {
+  0% {
+    background-image: url(imgs/Gato_emo.jpeg);
+  }
+  25% {
+    background-image: url(imgs/gato_bravo.webp);
+  }
+  50% {
+    background-image: url(imgs/gato_theRock.jpg);
+    background-position: top;
+  }
+  75% {
+    background-image: url(imgs/gato_engasgado.jpeg);
+  }
+  100% {
+    background-image: url(imgs/gato_comBomba.jpg);
+  }
 }
