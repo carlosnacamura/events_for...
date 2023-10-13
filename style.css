@@ -24,6 +24,7 @@ body {
   width: 100vw;
   height: 100vh;
   animation: troca_fundo 10s alternate infinite;
+  z-index: 800;
 }
 .dog {
   display: none;
@@ -48,6 +49,30 @@ body {
 }
 .fundo {
   background-color: black;
+  display: none;
+}
+.fundo button {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: tomato;
+  border: none;
+  display: none;
+}
+.fundo input {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.chave {
+  display: none;
+}
+.verif{
+  display: none;
+}
+.bomb {
+  display: none;
+}
+.berus {
   display: none;
 }
 .explicacao {
